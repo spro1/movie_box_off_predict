@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내 영화 관객수 예측</title>
+    <link rel="stylesheet" href="/static/css/common.css" />
+</head>
+<body>
+    <h2>
+        내 영화 줄거리 관객수는?
+    </h2>
+    <div class="logo">
+        <img src="/static/img/main-logo_.png"/>
+    </div>
+    <div class="main">
+        <form action="/pred" method="post">
+            <div class="title">
+                <h5>영화 제목</h5>
+                <input type="text" name="title" id="title" placeholder="ex) 토르 vs 마동석" required/>
+            </div>
+            <div class="category">
+                <h5>카테고리</h5>
+                <select name="category" id="category" required>
+                    <option value="SF">SF</option>
+                    <option value="판타지">판타지</option>
+                    <option value="어드벤처">어드벤처</option>
+                    <option value="액션">액션</option>
+                    <option value="사극">사극</option>
+                    <option value="전쟁">전쟁</option>
+                    <option value="드라마">드라마</option>
+                    <option value="범죄">범죄</option>
+                    <option value="애니메이션">애니메이션</option>
+                    <option value="코미디">코미디</option>
+                    <option value="미스터리">미스터리</option>
+                    <option value="다큐멘터리">다큐멘터리</option>
+                    <option value="스릴러">스릴러</option>
+                    <option value="공포">공포</option>
+                    <option value="공연">공연</option>
+                </select>
+            </div>
+            <div class="open">
+                <div class="year">
+                    <h5>개봉 연도</h5>
+                    <select name="year" id="year" required>
+                        <option value="2017">2017</option>
+                        <option value="2017">2018</option>
+                        <option value="2017">2019</option>
+                        <option value="2017">2020</option>
+                        <option value="2017">2021</option>
+                    </select>
+                </div>
+                <div class="month">
+                    <h5>개봉 월</h5>
+                    <select name="month" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+            <h5>참여 스태프 수</h5>
+            <input type="number" name="staff" placeholder='ex) 100' max="999" required/>
+            <h5>영화 줄거리</h5>
+            <textarea name="story" required>ex) 서울 한복판에 마동석과 천둥의 신 토르가 떴다! 숨 막히는 한판 승부, 승자는 과연!</textarea>
+            <button type="submit">관객수 예측하기</button>
+        </form>
+    </div>
+    <footer>
+    <div class="wrap">
+      <p>Copyright © 2022 INHA University Project. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

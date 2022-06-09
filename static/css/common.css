@@ -1,0 +1,138 @@
+/* font setting */
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "GmarketSansMedium", sans-serif;
+}
+
+body {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: "GmarketSansBold", sans-serif;
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.logo img{
+    height: 200px;
+}
+
+form{
+    text-align: center;
+}
+form h5{
+    line-height: 40px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 5px;
+}
+
+select {
+    width: 310px;
+    height: 40px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-bottom: 5px;
+}
+
+.open{
+    display: flex;
+}
+
+.open select{
+    width: 55%;
+}
+
+.year{
+    width: 50%;
+}
+
+.month{
+    width: 50%;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+
+    overflow: auto;
+    white-space: pre-wrap;
+
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    text-align: left;
+
+    resize: none;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 320px;
+    height: 40px;
+    line-height: 40px;
+
+    background-color: #FF8F35;
+    border: 0;
+    font-size: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    margin-top: 20px;
+    width: 400px;
+
+    padding: 1rem 0 1rem;
+    box-sizing: border-box;
+    border-top: 0.1rem solid #d9d9d9;
+    text-align: center;
+    font-family: GmarketSansLight, serif;
+    font-size: 11px;
+
+    bottom : 0;
+}
+footer .wrap{
+}

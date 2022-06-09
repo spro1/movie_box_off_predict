@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }} 관객수 예측</title>
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/static/css/result.css"/>
+    <script src="/static/js/loading-page.js"></script>
+</head>
+<body onload="myFunction()">
+    <div id="loader"></div>
+    <div id="container" class="container" style="display: none">
+    <div class="logo">
+        <img src="/static/img/{{ category }}.png"/>
+    </div>
+    <div class="main">
+        <div class="title">
+            <h3>{{ title }}</h3>
+        </div>
+        <h2>예측 관객 수 : {{ '{:,}'.format(movie_data["box_off_num_rf"][0]) }}</h2>
+        <h4>{{ movie_data["년"][0] }}-{{ movie_data["월"][0] }} | staff {{ movie_data["staff"][0] }}명</h4>
+        <br/>
+        <h4>영화 줄거리</h4>
+        <textarea disabled>{{ story }}</textarea>
+        <hr/>
+        <div class="rank">
+            <h4>줄거리가 유사한 영화</h4>
+            <ol class="movie-rank">
+                {% for sim in similar_data %}
+                    <li>{{ sim }}</li>
+                {% endfor %}
+            </ol>
+        </div>
+        <hr/>
+        <div class="predict">
+            <h4>유사도 기반</h4>
+            <h5>1주차 평균 관객 : {{ '{:,}'.format(movie_data["1주차_관객수"][0]) }}</h5>
+            <!--<h5>누적 관객 : {{ '{:,}'.format(movie_data["1주차_누적관객수"][0]) }}</h5>-->
+            <h4>예측 데이터</h4>
+            <h5>2주차 예측 관객 : {{ '{:,}'.format(movie_data["2주차_관객수"][0]) }}</h5>
+            <!--<h5>2주차 누적 관객 : {{ '{:,}'.format(movie_data["2주차_누적관객수"][0]) }}</h5>-->
+            <h5>3주차 예측 관객 : {{ '{:,}'.format(movie_data["3주차_관객수"][0]) }}</h5>
+            <!--<h5>3주차 누적 관객 : {{ '{:,}'.format(movie_data["3주차_누적관객수"][0]) }}</h5>-->
+            <h5>최종 예측 관객 : {{ '{:,}'.format(movie_data["box_off_num_rf"][0]) }}</h5>
+        </div>
+        <a href="/"><button>돌아가기</button></a>
+    </div>
+    <footer>
+    <div class="wrap">
+      <p>Copyright © 2022 INHA University Project. All rights reserved.</p>
+    </div>
+    </footer>
+    </div>
+</body>
+</html>
