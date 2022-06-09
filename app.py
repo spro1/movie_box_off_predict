@@ -39,6 +39,7 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=["GET"])
+@app.route('/index')
 def index():
     return render_template('index.html')
 
@@ -46,6 +47,12 @@ def index():
 @app.route('/result', methods=["GET", "POST"])
 def result():
     return render_template('result.html')
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return redirect(url_for('index'))
+
 
 
 @app.route('/pred', methods=["GET", "POST"])
