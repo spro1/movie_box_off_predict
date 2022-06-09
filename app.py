@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 
 # python library
 import math
@@ -7,8 +7,8 @@ import numpy as np
 
 from sklearn.ensemble import RandomForestRegressor, VotingRegressor, GradientBoostingRegressor
 
-import xgboost
-from xgboost import XGBRegressor
+#import xgboost
+#from xgboost import XGBRegressor
 
 from sklearn.metrics.pairwise import linear_kernel
 import re
