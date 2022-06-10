@@ -54,6 +54,11 @@ def page_not_found(error):
     return redirect(url_for('index'))
 
 
+@app.errorhandler(500)
+def internal_server_error(error):
+    return redirect(url_for('index'))
+
+
 @app.route('/loading', methods=["GET", "POST"])
 def loading():
     data = request.form.to_dict()
@@ -145,7 +150,7 @@ def new_movie_similar(title, story, category, staff, year, month):
     # 데이터 셋 불러오기
     datasetAll = pd.read_csv('static/data/movie_list.csv', encoding='CP949')
     copy_datasetAll = datasetAll.copy()
-    copy_datasetAll = copy_datasetAll[:500]
+    copy_datasetAll = copy_datasetAll[:498]
     data = pd.json_normalize({"movie_name": title, "story": story, "category": category})
     copy_datasetAll = pd.concat([copy_datasetAll, data], ignore_index=True)
 
