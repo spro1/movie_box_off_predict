@@ -115,7 +115,7 @@ def new_movie():
         new_movie_data["box_off_num_gb"] = gb_value
         #new_movie_data["box_off_num_vt"] = voting_value
 
-        print(new_movie_data, similar_movie)
+        #print(new_movie_data, similar_movie)
 
     return render_template('result.html', title=title, story=story, category=category,
                            movie_data=new_movie_data, similar_data=similar_movie)
@@ -145,7 +145,7 @@ def new_movie_similar(title, story, category, staff, year, month):
     # 데이터 셋 불러오기
     datasetAll = pd.read_csv('static/data/movie_list.csv', encoding='CP949')
     copy_datasetAll = datasetAll.copy()
-    copy_datasetAll = copy_datasetAll[:250]
+    copy_datasetAll = copy_datasetAll[:500]
     data = pd.json_normalize({"movie_name": title, "story": story, "category": category})
     copy_datasetAll = pd.concat([copy_datasetAll, data], ignore_index=True)
 
