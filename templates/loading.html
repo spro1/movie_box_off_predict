@@ -14,7 +14,7 @@
 <body>
     <div id="loader">
     </div>
-    <p class="wait">잠시만 기다려주세요.<br/>{{ data["title"] }}의 관객수를 분석중입니다.</p>
+    <p class="wait">잠시만 기다려주세요.<br/><strong>{{ data["title"] }}</strong>의 관객수를 분석중입니다.</p>
     <form id="form" style="display: none" action="/pred" method="post">
         <input name="title" value="{{ data["title"] }}" type="text"/>
         <input name="category" value="{{  data["category"] }}" type="text"/>
