@@ -25,7 +25,7 @@
 }
 
 body {
-    max-width: 400px;
+    max-width: 350px;
     margin: 0 auto;
     text-align: center;
 }
@@ -49,7 +49,7 @@ form h5{
 }
 
 input{
-    width: 300px;
+    width: 250px;
     height: 40px;
     font-size: 15px;
     border: 0;
@@ -61,7 +61,7 @@ input{
 }
 
 select {
-    width: 310px;
+    width: 260px;
     height: 40px;
     font-size: 15px;
     border: 0;
@@ -89,7 +89,7 @@ select {
 }
 
 textarea {
-    width: 300px;
+    width: 250px;
     height: 150px;
 
     overflow: auto;
@@ -107,7 +107,7 @@ textarea {
 }
 
 button {
-    width: 320px;
+    width: 270px;
     height: 40px;
     line-height: 40px;
 
@@ -123,14 +123,15 @@ button {
 /* footer */
 footer{
     margin-top: 20px;
-    width: 400px;
+    width: 350px;
+    max-width: 350px;
 
     padding: 1rem 0 1rem;
     box-sizing: border-box;
     border-top: 0.1rem solid #d9d9d9;
     text-align: center;
     font-family: GmarketSansLight, serif;
-    font-size: 11px;
+    font-size: 10px;
 
     bottom : 0;
 }

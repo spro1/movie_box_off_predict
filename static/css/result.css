@@ -21,13 +21,13 @@ h2 {
 .movie-rank{
     text-align: center;
     margin: 10px auto;
-    width: 300px;
+    width: 250px;
 }
 
 hr {
     margin: 10px auto;
     color: #eeeeee;
-    width: 300px;
+    width: 350px;
 }
 
 #loader {
@@ -60,16 +60,6 @@ a{
     text-decoration: none;
 }
 
-button{
-    width: 320px;
-    height: 40px;
-    line-height: 40px;
-
-    background-color: #FF8F35;
-    border: 0;
-    font-size: 15px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    cursor: pointer;
+.wait{
+    margin-top: 50px;
 }

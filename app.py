@@ -54,13 +54,15 @@ def page_not_found(error):
     return redirect(url_for('index'))
 
 
+@app.route('/loading', methods=["GET", "POST"])
+def loading():
+    data = request.form.to_dict()
+    return render_template('loading.html', data=data)
+
 
 @app.route('/pred', methods=["GET", "POST"])
 def new_movie():
     if request.method == "POST":
-        print(request.form.get("title"), request.form.get("year"), request.form.get("month"),
-              request.form.get("staff"), request.form.get("story"))
-
         title = request.form.get("title")
         category = request.form.get('category')
         year = request.form.get("year")
@@ -231,4 +233,4 @@ def new_movie_similar(title, story, category, staff, year, month):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=80)
