@@ -55,7 +55,7 @@ input{
     border: 0;
     border-radius: 15px;
     outline: none;
-    padding-left: 10px;
+    padding-left: 15px;
     background-color: rgb(233, 233, 233);
     margin-bottom: 5px;
 }
@@ -67,7 +67,7 @@ select {
     border: 0;
     border-radius: 15px;
     outline: none;
-    padding-left: 10px;
+    padding-left: 15px;
     background-color: rgb(233, 233, 233);
     margin-bottom: 5px;
 }
@@ -77,7 +77,7 @@ select {
 }
 
 .open select{
-    width: 55%;
+    width: 50%;
 }
 
 .year{
